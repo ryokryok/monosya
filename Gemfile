@@ -41,6 +41,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
 
 # icons
 gem 'font-awesome-rails'
