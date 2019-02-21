@@ -1,3 +1,4 @@
-nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  = link_to 'monosya', root_path,  class: 'navbar-brand'
-  = render 'layouts/dropdown'
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  = link_to root_path, class: 'navbar-brand' do
+    = image_tag 'logo_h150.png', height:'60'
+  = render 'layouts/menu'
