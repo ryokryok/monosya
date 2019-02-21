@@ -1,0 +1,13 @@
+= form_for(@post) do |post_form|
+  - if @post.image.blank?
+    = image_tag @post.image_url, class: 'img-fluid'
+  .form-group
+    = post_form.hidden_field :image_cache, class: 'form-control'
+  .form-group
+    = post_form.file_field :image, class: 'form-control'
+  .form-group
+    = post_form.text_field :title, class: 'form-control'
+  .form-group
+    = post_form.text_area :message, class: 'form-control'
+  .form-group
+    = post_form.submit btn_name , class: 'btn btn-primary'
