@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :show
 
   def index
     @posts = Post.all
+  end
+
+  def show
+    @post = Post.find_by(id: params[:id])
   end
 
   def new
@@ -14,7 +18,7 @@ class PostsController < ApplicationController
 
     if @post.save
       flash[:notice] = '投稿しました'
-      redirect_to posts_url
+      redirect_to root_url
     else
       flash[:alert] = '入力を確認してください。画像は必須です。'
       render 'posts/new'

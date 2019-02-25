@@ -1,0 +1,6 @@
+.card.mb-4.w-100
+  = cl_image_tag @post.image,effect: 'grayscale', class:'card-img-top'
+  .card-body
+    h5.card-title = @post.title
+    p.card-subtitle = @post.user.nickname
+    p.card-text = @post.message

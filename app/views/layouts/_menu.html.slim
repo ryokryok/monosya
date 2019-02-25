@@ -1,4 +1,4 @@
-.btn-group
+.btn-group.ml-auto
   - if user_signed_in?
     = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'btn btn-link'
     = link_to '新規投稿', new_post_path, class: 'btn btn-secondary'
