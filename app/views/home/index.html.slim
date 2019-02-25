@@ -1,3 +1,5 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
-= link_to 'about' ,home_about_path, class: 'btn'
+  .row.mr-1
+    - @posts.each do |post|
+      .col-lg-3.col-md-4.col-sm-6
+        = link_to post_path(post)
+          = cl_image_tag post.image,effect: 'grayscale',class:'img-fluid m-2'
